@@ -1,0 +1,27 @@
+groups:
+  - name: kuva-catalog-pricing-alerts
+    rules:
+      - alert: CatalogPricingServiceDown
+        expr: up{job="kuva-catalog-pricing-service"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Catalog Pricing Service indisponivel"
+          description: "O Prometheus nao consegue coletar metricas do Catalog Pricing Service."
+      - alert: CatalogPricingQuoteFailures
+        expr: rate(kuva_catalog_quote_failures_total[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Falhas em quote de catalogo/preco"
+          description: "Falhas de validacao ou calculo de quote aumentaram nos ultimos 5 minutos."
+      - alert: CatalogPricingCatalogEmpty
+        expr: increase(kuva_catalog_catalog_empty_total[10m]) > 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Catalogo vazio para alguma loja"
+          description: "Foi detectada consulta de catalogo sem SKU vendavel."
