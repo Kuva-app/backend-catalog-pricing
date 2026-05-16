@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Kuva.CatalogPricing.Business/Kuva.CatalogPricing.Business.csproj" />
+  <Project Path="Kuva.CatalogPricing.EFMigrations/Kuva.CatalogPricing.EFMigrations.csproj" />
+  <Project Path="Kuva.CatalogPricing.Entities/Kuva.CatalogPricing.Entities.csproj" />
+  <Project Path="Kuva.CatalogPricing.Repository/Kuva.CatalogPricing.Repository.csproj" />
+  <Project Path="Kuva.CatalogPricing.Service/Kuva.CatalogPricing.Service.csproj" />
+  <Project Path="Kuva.CatalogPricing.Tests/Kuva.CatalogPricing.Tests.csproj" />
+</Solution>

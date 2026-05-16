@@ -1,0 +1,6 @@
+@Kuva.CatalogPricing.Service_HostAddress = http://localhost:0
+
+GET {{Kuva.CatalogPricing.Service_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
