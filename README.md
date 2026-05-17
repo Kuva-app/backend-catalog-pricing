@@ -128,6 +128,13 @@ dotnet test Source/Kuva.CatalogPricing.sln \
   -m:1
 ```
 
+O comando gera `coverage.cobertura.xml` e `coverage.opencover.xml` em uma subpasta de
+`TestResults`. Para o SonarScanner for .NET, aponte o relatorio OpenCover:
+
+```bash
+/d:sonar.cs.opencover.reportsPaths="TestResults/**/coverage.opencover.xml"
+```
+
 Ultima validacao local:
 
 ```text
